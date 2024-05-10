@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document traverse an array</title>
+
+    <script>
+        let data = [9, 23, 45, 67, 8, 7, 5, 3, 12, 11];
+
+        function getElement() {
+
+
+            let el = document.getElementById("element").value;
+            if (el < data.length && typeof  parseInt(el)==="number") {
+
+                alert(data[el])
+            }else{
+                alert("plzz enter correct value")
+            }
+
+
+        }
+
+
+
+    </script>
+</head>
+
+<body>
+
+    <input type="text" name="" id="element">
+    <button onclick="getElement()">get the element</button>
+
+</body>
+
+</html>
