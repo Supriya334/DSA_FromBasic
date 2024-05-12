@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>insertion of an element</title>
+    <script>
+
+
+        // let data = [23, 34, 56, 78, 11, 33, 555]
+
+
+        // let newEle = 22;
+        
+        // let position = 2;
+
+        // for(let i=data.length-1; i>=0; i--){
+        //     // console.log(data[i])
+
+        //     if(i>=position){
+        //         data[i+1]=data[i]
+        //         if(i==position){
+        //             data[i]=newEle
+                // }
+                // it will shift one place back 
+        //     }
+        // }
+
+        // console.log(data)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        function insertEle() {
+            let data = [23, 34, 56, 78, 11, 33, 555]
+            let newEle = parseInt(document.getElementById("newEle").value);
+            let position = parseInt(document.getElementById("position").value);
+
+
+            for (let i = data.length - 1; i >= 0; i--) {
+
+                if (i >= position) {
+                    data[i + 1] = data[i]
+                    if (i == position) {
+                        data[i] = newEle
+
+
+
+                    }
+                }
+            }
+            if (position > data.length) {
+                alert("Enter the position within the range of array length");
+                return;
+            }
+
+            console.log(data)
+
+        }
+
+
+
+
+        // or use splice inbuilt function for your element to insert
+        // data.splice(1,0,23)
+        //    position,delet item number, the number 
+
+    </script>
+</head>
+
+<body>
+
+    <input type="text" placeholder="enter new element" id="newEle">
+    <input type="text" placeholder="enter position" id="position">
+    <button onclick="insertEle()">Insert</button>
+</body>
+
+</html>
