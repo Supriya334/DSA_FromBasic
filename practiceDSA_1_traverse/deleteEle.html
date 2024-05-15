@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete the element</title>
+
+    <script>
+        function removeEle() {
+
+
+            let data = [30, 24, 35, 46, 67, 89, 11]
+
+            let position = document.getElementById("position").value;
+
+            position=parseInt //it will give undefined otherwise
+
+
+
+            for (i = position; i < data.length; i++) { 
+
+                data[i] = data[i + 1] 
+
+            }
+            data.length = data.length-1    //to avoid priting element similar twice
+
+            console.log(data)
+
+        }
+        // removeEle()
+
+
+
+    </script>
+
+</head>
+
+
+
+
+
+
+
+
+
+
+
+<body>
+<input type="text" placeholder="enter the position" id="position">
+<button onclick="removeEle()">remove element</button>
+</body>
+
+</html>
