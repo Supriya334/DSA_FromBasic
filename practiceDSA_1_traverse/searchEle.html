@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>search the element in array</title>
+</head>
+
+<script>
+    // let data = [12, 23, 123, 124, 156, 167, 10];
+
+    // let item = 70;
+
+    // let index = undefined;
+
+    // for (i = 0; i <= data.length; i++) {
+
+    //     if (data[i] === parseInt(item)) {
+
+    //         index = i;
+    //         break;
+    //     }
+    // }
+
+    // console.log(index)
+
+    // console.log(data.indexOf(item)) 
+    // default function to find index
+
+    // data.splice(2,1)
+    // index,how many items to delete
+    // console.log(data)
+
+
+
+
+
+    function searchEle() {
+        let data = [12, 23, 123, 124, 156, 167, 10,34,45,56,67,78,11];
+
+        let item = document.getElementById("searchEle").value;
+
+        let index = undefined;
+
+        for (i = 0; i <= data.length; i++) {
+
+            if (data[i] == item) {
+                // ===parseInt
+
+                index = i;
+                break;
+            }
+        }
+
+        console.log(index)
+    }
+
+
+</script>
+
+<body>
+    <input type="text" name="" id="searchEle" placeholder="search your element">
+
+    <button onclick="searchEle()">Search Element</button>
+</body>
+<!-- done -->
+
+</html>
